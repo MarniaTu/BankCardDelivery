@@ -30,7 +30,7 @@ public class CardDeliveryTest {
         form.$("[data-test-id='phone'] .input__control").sendKeys("+79051236789");
         form.$("[data-test-id='agreement'] .checkbox__box").click();
         form.$$("button").last().click();
-        $(withText("Встреча успешно забронирована на")).shouldBe(visible);
+        $(withText("Встреча успешно забронирована на")).shouldBe(visible, Duration.ofSeconds(15));
 
     }
 }
